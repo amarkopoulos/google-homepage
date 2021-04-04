@@ -8,6 +8,7 @@
   <title>Google - Homepage</title>
 </head>
 <body>
+  <!-- Start Header Nav -->
   <header class="head-container">
     <div class="left-nav">
       <ul>
@@ -19,12 +20,35 @@
       <ul>
         <li class="nav-item"><a href="#" class="nav-item-link">Gmail</a></li>
         <li class="nav-item"><a href="#" class="nav-item-link">Images</a></li>
-        <li class="nav-item"><a href="#" class="nav-item-link">
-          <img src="images/apps_black_24dp.svg" alt="apps" class="apps-icon">
+        <li class="nav-item"><a href="#" class="nav-item-link apps-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
         </a></li>
         <li class="nav-item"><a href="#" class="nav-item-link signin">Sign in</a></li>
       </ul>
     </div>
   </header>
+  <!-- End eader Nav -->
+
+  <main class="main-container">
+    <div class="logo">
+      <img src="images/GoogleLogo.png" alt="Google">
+    </div>
+    <form action="">
+      <div class="input-container">
+        <div class="search-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#9aa0a6"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </div>
+        <label for="search" id="search"></label>
+        <input type="text" name="search" class="search-bar">
+        <div class="voice-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#9aa0a6"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 24h2v-2H7v2zm5-11c1.66 0 2.99-1.34 2.99-3L15 4c0-1.66-1.34-3-3-3S9 2.34 9 4v6c0 1.66 1.34 3 3 3zm-1 11h2v-2h-2v2zm4 0h2v-2h-2v2zm4-14h-1.7c0 3-2.54 5.1-5.3 5.1S6.7 13 6.7 10H5c0 3.41 2.72 6.23 6 6.72V20h2v-3.28c3.28-.49 6-3.31 6-6.72z"/></svg>
+        </div>
+        </div>
+      <div class="buttons">
+        <button type="submit" id="submit" class="submit-button">Google Search</button>
+        <button type="submit" id="submit" class="submit-button">I'm Feeling Lucky</button>
+      </div>
+    </form>
+  </main>
 </body>
 </html>
