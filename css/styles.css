@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: #4583EB;
+  color: #fff;
+}
+
 html, body {
   font-family: Arial, sans-serif;
   font-size: 13px;
@@ -13,99 +18,112 @@ html, body {
   width: 100%;
   position: relative;
   background-color: #fff;
+  overflow: hidden;
 }
 
 /* Start Styles Header Nav */
 .head-container {
+  width: 100%;
+}
+
+.navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
+  justify-content: flex-end;
+  margin: 0 20px;
+  padding: 15px 0;
 }
 
-.left-nav {
-  margin-left: 20px;
-}
-
-.right-nav {
-  margin-right: 20px;
-}
-
-ul {
+.nav-list,
+.footer-list {
   list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-ul li.nav-item {
+.nav-item {
   margin: 0 10px;
 }
 
-ul li.nav-item a.nav-item-link {
+.nav-item .nav-item-link {
   text-decoration: none;
   color: #000;
-  opacity: .75;
+  opacity: .87;
+  line-height: 24px;
 }
 
-ul li.nav-item a.nav-item-link:hover {
+.nav-item .nav-item-link:hover {
   text-decoration: underline;
 }
 
-ul li a.apps-icon {
+.apps-icon {
   position: relative;
-  top: 2px;
-}
-
-ul li.nav-item a.nav-item-link.signin {
-  padding: 10px 16px;
-  font-weight: 700;
-  background-color: #4583EB;
-  color: #fff;
-  border-radius: 4px;
+  top: 3px;
   opacity: 1;
 }
 
-ul li.nav-item a.nav-item-link.signin:hover {
-  text-decoration: none;
-  background-color: #3D73CF;
+.apps-icon:hover {
+  background-color: red;
+  border-radius: 50%
+  width: 24px;
+  height: 24px;
 }
 
+#signin {
+  background-color: #1a73e8;
+  color: #fff;
+  min-width: 96px;
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .25px;
+  border-radius: 4px;
+  line-height: 16px;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+#signin:hover {
+  background-color: #2b7de9;
+  text-decoration: none;
+}
 /* End Styles Header Nav */
 
 /* Start Main Content */
 .main-container {
+  width: 100%;
+  height: auto;
+}
+
+.logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 .logo {
-  padding-top: 185px;
-  margin-bottom: 1.6em;
+  padding-top: 120px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .search-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  margin-top: 30px;
+}
 
+.form {
+  max-width: 582px;
+  margin: 0 auto;
 }
 
 .full-searchbar {
-  width: 582px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  padding: 8px 10px;
+  padding: 3px 8px;
   border: 1px solid #dfe1e5;
   border-radius: 24px;
-}
-
-.full-searchbar:hover {
-  box-shadow: 0 1px 6px rgba(32,33,36,.28);
-  border-color: rgba(223,225,229,0);
 }
 
 .search-icon,
@@ -116,7 +134,8 @@ ul li.nav-item a.nav-item-link.signin:hover {
 }
 
 .search-input {
-  width: 487px;
+  width: 100%;
+  height: 36px;
   font-size: 14px;
   border: 0;
 }
@@ -127,15 +146,23 @@ ul li.nav-item a.nav-item-link.signin:hover {
   outline: 0;
 }
 
+/* .full-searchbar:focus-within, */
+.full-searchbar:hover {
+  box-shadow: 0 1px 6px rgba(32,33,36,.28);
+  border-color: rgba(223,225,229,0);
+}
+
 .buttons {
-  text-align: center;
-  margin-top: 2.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .submit-button {
   background-color: #f8f9fa;
   margin: 0 6px;
-  color: #202124;
+  color: #5f6368;
   border-radius: 4px;
   border: 1px solid #f8f9fa;
   padding: 0 16px;
@@ -151,6 +178,7 @@ ul li.nav-item a.nav-item-link.signin:hover {
 }
 /* End of Main Content */
 
+/* Start Footer */
 .footer-container {
   background-color: #f2f2f2;
   width: 100%;
@@ -190,3 +218,43 @@ ul li.nav-item a.nav-item-link.signin:hover {
 .footer-item .footer-item-link:hover {
   text-decoration: underline;
 }
+/* End Footer */
+
+/* Responsiveness - Media Queries */
+@media all and (max-width: 612px) {
+  .form {
+    max-width: 95.09%;
+  }
+
+  .nav-item {
+    margin: 0 5px;
+  }
+
+  .visible {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 584px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .logo img {
+    max-width: 71.57%;
+  }
+}
+
+@media all and (max-width: 312px) {
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .submit-button {
+    margin: 5px 0;
+  }
+}
+
+
