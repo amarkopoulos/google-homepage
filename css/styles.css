@@ -63,13 +63,6 @@ html, body {
   opacity: 1;
 }
 
-.apps-icon:hover {
-  background-color: red;
-  border-radius: 50%
-  width: 24px;
-  height: 24px;
-}
-
 #signin {
   background-color: #1a73e8;
   color: #fff;
@@ -103,13 +96,13 @@ html, body {
 }
 
 .logo {
-  padding-top: 120px;
+  padding-top: 12em;
   margin: 0 auto;
   text-align: center;
 }
 
 .search-container {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .form {
@@ -197,6 +190,7 @@ html, body {
   align-items: center;
   justify-content: space-around;
   padding: 20px 0;
+  flex-wrap: wrap;
 }
 
 .footer-list {
@@ -206,6 +200,7 @@ html, body {
 .left-footer .footer-item,
 .right-footer .footer-item  {
   margin: 0 10px;
+  white-space: nowrap;
 }
 
 .footer-item .footer-item-link {
@@ -236,6 +231,9 @@ html, body {
 }
 
 @media only screen and (max-width: 584px) {
+  .logo {
+    padding-top: 8em;
+  }
   .footer-container {
     flex-direction: column;
   }
@@ -245,9 +243,27 @@ html, body {
   .logo img {
     max-width: 71.57%;
   }
+
+  .footer-list-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-list-left .footer-item {
+    margin-top: 10px;
+  }
 }
 
 @media all and (max-width: 312px) {
+  .logo img {
+    max-width: 60%;
+  }
+  
+  .form {
+    max-width: 85%;
+  }
+
   .buttons {
     flex-direction: column;
   }
