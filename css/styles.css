@@ -11,13 +11,17 @@
   color: #fff;
 }
 
-html, body {
+html {
+  height: 100%;
+}
+
+body {
   font-family: Arial, sans-serif;
   font-size: 13px;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   background-color: #fff;
-  overflow: hidden;
+  overflow-x: scroll;
   display: flex;
   flex-direction: column;
 }
@@ -255,6 +259,10 @@ html, body {
 }
 
 @media all and (max-width: 312px) {
+  .logo {
+    padding-top: 5em;
+  }
+  
   .logo img {
     max-width: 60%;
   }
