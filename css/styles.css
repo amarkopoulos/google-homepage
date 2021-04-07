@@ -16,9 +16,10 @@ html, body {
   font-size: 13px;
   height: 100%;
   width: 100%;
-  position: relative;
   background-color: #fff;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Start Styles Header Nav */
@@ -176,9 +177,7 @@ html, body {
   background-color: #f2f2f2;
   width: 100%;
   border-top: 1px solid #e4e4e4;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
