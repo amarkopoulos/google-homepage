@@ -278,6 +278,10 @@ body {
   .submit-button {
     margin: 5px 0;
   }
+
+  .left-footer, .right-footer {
+    padding: 10px 0;
+  }
 }
 
 
